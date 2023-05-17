@@ -1,5 +1,5 @@
 <?php 
-    include __DIR__ . '/Models/products.php';
+    include __DIR__ . '/Models/Product.php';
 
     $products = array(
         new Bed('BelRiposino', 156.65 , 'dog', 'https://img.fruugo.com/product/5/39/480217395_max.jpg', 'Wool'),

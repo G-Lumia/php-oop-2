@@ -30,8 +30,8 @@
 
     // Vengono incluse la classi figlie, generate da Products
     
-    include __DIR__ . '/beds.php';
-    include __DIR__ . '/toys.php';
-    include __DIR__ . '/food.php';
+    include __DIR__ . '/Bed.php';
+    include __DIR__ . '/Toy.php';
+    include __DIR__ . '/Food.php';
 
 ?>
