@@ -37,9 +37,6 @@
                             </li>
                         </ul>
                 </div>
-
-
-
         </nav>
     </header>
     <main class="container">

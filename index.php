@@ -1,10 +1,13 @@
 <?php
+    // vengono caricati l'array di prodotti e l'header 
     include __DIR__ . '/db.php';
     include __DIR__ . '/Partials/Template/header.php';
 ?>
 
+
 <div class="container row">
     <?php
+    //ciclo per la stampa in pagina dei prodotti
         foreach($products as $product):
     ?>
             <div class="col-12 col-sd-6 col-md-4 col-lg-3">
@@ -18,7 +21,6 @@
                         <img src="<?php echo $product->getProductImg()?>" class="card-img-top" alt="<?php  echo $product->getName()?>">
                         <p>
                             <strong> Category: </strong>
-                            <br>
                             <?php 
                             if($product->getCategory() == "dog")
                             {?>
@@ -36,9 +38,12 @@
                         <p>
                             <strong> Price: </strong>
                             <br>
-                            <?php echo "{$product->getPrice()}";
+                            <?php echo "{$product->getPrice()}$";
                             ?>
                         </p>
+                        <!-- Dopo aver stampato i dati base dei prodotti, viene effettuato
+                        un controllo per verificare la classe del prodotto.
+                        In base alla classe verranno stampati dati diversi -->
                         <?php 
                             if(get_class($product) == "Toy")
                             {
@@ -104,6 +109,7 @@
             </div>
             <?php
         endforeach;
+        // viene caricata la pagina footer.php
         include __DIR__ . '/Partials/Template/footer.php';
         ?>
 </div>
