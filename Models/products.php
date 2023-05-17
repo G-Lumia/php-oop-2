@@ -24,4 +24,9 @@
             return $this->productImg;
         }
     }
+
+    include __DIR__ . '/beds.php';
+    include __DIR__ . '/toys.php';
+    include __DIR__ . '/food.php';
+
 ?>
