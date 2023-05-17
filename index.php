@@ -19,7 +19,19 @@
                         <p>
                             <strong> Category: </strong>
                             <br>
-                            <?php echo $product->getCategory();?>
+                            <?php 
+                            if($product->getCategory() == "dog")
+                            {?>
+                            <i class="fa-solid fa-dog"></i>
+                            <?php 
+                            }
+                            elseif($product->getCategory() == "cat")
+                            {
+                            ?>
+                                <i class="fa-solid fa-cat"></i>
+                            <?php 
+                            }
+                            ?>
                         </p>
                         <p>
                             <strong> Price: </strong>
@@ -86,6 +98,7 @@
                         <?php 
                             }
                         ?>
+                        <button class="btn btn-primary"> Buy Now </button>
                     </div>
                 </div>
             </div>
